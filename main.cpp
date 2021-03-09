@@ -127,10 +127,13 @@ int main( int argc, char* argv[] )
 	set_save_biofvm_cell_data_as_custom_matlab( true );
 	
 	// save a simulation snapshot 
+	std::cout << "setting up start" << std::endl;
 	
 	char filename[1024];
 	sprintf( filename , "%s/initial" , PhysiCell_settings.folder.c_str() ); 
 	save_PhysiCell_to_MultiCellDS_xml_pugi( filename , microenvironment , PhysiCell_globals.current_time ); 
+
+	std::cout << "initial ouput done" << std::endl;
 	
 	// save a quick SVG cross section through z = 0, after setting its 
 	// length bar to 200 microns 

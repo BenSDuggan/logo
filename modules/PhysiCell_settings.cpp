@@ -543,7 +543,6 @@ void User_Parameters::read_from_pugixml( pugi::xml_node parent_node )
 	}
 	
 	std::cout << "User parameters in XML config file: " << std::endl; 
-	std::cout << *this << std::endl; 
 	
 	return; 
 }
