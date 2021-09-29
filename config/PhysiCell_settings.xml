@@ -1,9 +1,9 @@
 <PhysiCell_settings version="devel-version">
 	<domain>
-		<x_min>-500</x_min>
-		<x_max>500</x_max>
-		<y_min>-500</y_min>
-		<y_max>500</y_max>
+		<x_min>-313</x_min>
+		<x_max>312</x_max>
+		<y_min>-200</y_min>
+		<y_max>200</y_max>
 		<z_min>-10</z_min>
 		<z_max>10</z_max>
 		<dx>20</dx>
@@ -82,7 +82,7 @@
 		<motile_cell_apoptosis_rate type="double" units="1/min">0.0</motile_cell_apoptosis_rate> 
 		<motile_cell_relative_cycle_entry_rate type="double" units="dimensionless">0.1</motile_cell_relative_cycle_entry_rate>
 
-		<num_cells type="int" units="dimensionless">66</num_cells>
-	<cell-0 type="string">0;0;rgb(221,221,221)</cell-0><cell-1 type="string">0;50;rgb(204,204,204)</cell-1><cell-2 type="string">0;100;rgb(255,255,1)</cell-2><cell-3 type="string">0;150;rgb(177,255,97)</cell-3><cell-4 type="string">0;200;rgb(7,248,255)</cell-4><cell-5 type="string">0;250;rgb(9,249,4)</cell-5><cell-6 type="string">0;300;rgb(57,218,54)</cell-6><cell-7 type="string">0;350;rgb(247,7,254)</cell-7><cell-8 type="string">0;400;rgb(242,4,2)</cell-8><cell-9 type="string">0;450;rgb(244,2,1)</cell-9><cell-10 type="string">0;500;rgb(1,0,254)</cell-10><cell-11 type="string">50;0;rgb(213,213,213)</cell-11><cell-12 type="string">50;50;rgb(204,204,204)</cell-12><cell-13 type="string">50;100;rgb(255,255,1)</cell-13><cell-14 type="string">50;150;rgb(161,255,114)</cell-14><cell-15 type="string">50;200;rgb(7,248,255)</cell-15><cell-16 type="string">50;250;rgb(9,249,4)</cell-16><cell-17 type="string">50;300;rgb(72,204,69)</cell-17><cell-18 type="string">50;350;rgb(247,7,254)</cell-18><cell-19 type="string">50;400;rgb(242,4,2)</cell-19><cell-20 type="string">50;450;rgb(248,2,5)</cell-20><cell-21 type="string">50;500;rgb(1,0,254)</cell-21><cell-22 type="string">100;0;rgb(204,204,204)</cell-22><cell-23 type="string">100;50;rgb(204,204,204)</cell-23><cell-24 type="string">100;100;rgb(0,0,2)</cell-24><cell-25 type="string">100;150;rgb(6,1,0)</cell-25><cell-26 type="string">100;200;rgb(6,3,0)</cell-26><cell-27 type="string">100;250;rgb(0,1,2)</cell-27><cell-28 type="string">100;300;rgb(3,0,0)</cell-28><cell-29 type="string">100;350;rgb(5,1,0)</cell-29><cell-30 type="string">100;400;rgb(0,0,7)</cell-30><cell-31 type="string">100;450;rgb(0,3,0)</cell-31><cell-32 type="string">100;500;rgb(1,0,254)</cell-32><cell-33 type="string">150;0;rgb(204,204,204)</cell-33><cell-34 type="string">150;50;rgb(204,204,204)</cell-34><cell-35 type="string">150;100;rgb(255,255,1)</cell-35><cell-36 type="string">150;150;rgb(148,252,137)</cell-36><cell-37 type="string">150;200;rgb(7,248,255)</cell-37><cell-38 type="string">150;250;rgb(9,249,4)</cell-38><cell-39 type="string">150;300;rgb(93,187,91)</cell-39><cell-40 type="string">150;350;rgb(247,7,254)</cell-40><cell-41 type="string">150;400;rgb(242,4,2)</cell-41><cell-42 type="string">150;450;rgb(247,3,5)</cell-42><cell-43 type="string">150;500;rgb(1,0,254)</cell-43><cell-44 type="string">200;0;rgb(204,204,204)</cell-44><cell-45 type="string">200;50;rgb(204,204,204)</cell-45><cell-46 type="string">200;100;rgb(255,255,1)</cell-46><cell-47 type="string">200;150;rgb(133,250,145)</cell-47><cell-48 type="string">200;200;rgb(7,248,255)</cell-48><cell-49 type="string">200;250;rgb(8,248,3)</cell-49><cell-50 type="string">200;300;rgb(104,178,101)</cell-50><cell-51 type="string">200;350;rgb(248,8,255)</cell-51><cell-52 type="string">200;400;rgb(243,3,2)</cell-52><cell-53 type="string">200;450;rgb(243,4,1)</cell-53><cell-54 type="string">200;500;rgb(1,0,254)</cell-54><cell-55 type="string">250;0;rgb(9,64,85)</cell-55><cell-56 type="string">250;50;rgb(9,61,83)</cell-56><cell-57 type="string">250;100;rgb(255,255,255)</cell-57><cell-58 type="string">250;150;rgb(255,254,251)</cell-58><cell-59 type="string">250;200;rgb(51,4,120)</cell-59><cell-60 type="string">250;250;rgb(60,0,129)</cell-60><cell-61 type="string">250;300;rgb(21,17,18)</cell-61><cell-62 type="string">250;350;rgb(14,15,20)</cell-62><cell-63 type="string">250;400;rgb(14,16,15)</cell-63><cell-64 type="string">250;450;rgb(37,39,38)</cell-64><cell-65 type="string">250;500;rgb(10,12,9)</cell-65></user_parameters>
+		<num_cells type="int" units="dimensionless">6300</num_cells>
+	<cell-def-file type="string">config/cells.txt</cell-def-file></user_parameters>
 	
 </PhysiCell_settings>

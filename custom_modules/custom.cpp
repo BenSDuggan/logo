@@ -223,36 +223,49 @@ void setup_tissue( void )
 	Cell* pC;
 	
 	long range = parameters.ints("num_cells");
-	std::cout << "set range" << std::endl;
-	//range = 1;
-	for(long i=0; i<range; i++) {
-		std::cout << "1" << std::endl;
 
-		int param_index = parameters.strings.find_index("cell-"+std::to_string(i));
-		std::string raw = parameters.strings(param_index);
-		std::string delimiter = ";";
-		
-		int pos = raw.find(delimiter);
-		std::string y_pos = raw.substr(0, pos);
-		raw.erase(0, pos + delimiter.length());
+	FILE * fp;
+	char * line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	std::string raw;
+	std::string delimiter = ";";
 
-		pos = raw.find(delimiter);
-		std::string x_pos = raw.substr(0, pos);
-		raw.erase(0, pos + delimiter.length());
+	fp = fopen("config/cells.txt", "r");
 
-		std::string color_pos = raw;
+	if(fp != NULL) {
+		while((read = getline(&line, &len, fp)) != -1) {
+			raw = line;
+			
+			// Get y
+			int pos = raw.find(delimiter);
+			std::string y_pos = raw.substr(0, pos);
+			raw.erase(0, pos + delimiter.length());
 
-		std::cout << "3" << std::endl;
-		pC = create_cell(  );
-		//pC = create_cell( motile_cell );
-		std::cout << "4" << std::endl;
-		pC->assign_position( std::atoi(x_pos.c_str()), std::atoi(y_pos.c_str()), 0.0 );
-		//pC ->assign_position(100.0, 100.0, 0);
-		std::cout << "5" << std::endl;
-		pC->custom_data.add_variable("color", color_pos, 0);
-		pC->set_radius(20);
-		std::cout << "7" << std::endl;
+			// Get x
+			pos = raw.find(delimiter);
+			std::string x_pos = raw.substr(0, pos);
+			raw.erase(0, pos + delimiter.length());
+
+			// Get radius
+			pos = raw.find(delimiter);
+			std::string radius = raw.substr(0, pos);
+			raw.erase(0, pos + delimiter.length());
+
+			std::string color = raw;
+
+			pC = create_cell(  );
+			//pC = create_cell( motile_cell );
+			
+			pC->assign_position( std::atoi(x_pos.c_str()), std::atoi(y_pos.c_str()), 0.0 );
+			pC->custom_data.add_variable("color", color, 0);
+			pC->set_radius(std::atof(radius.c_str()));
+		}
 	}
+
+	fclose(fp);
+	if (line)
+		free(line);
 	
 	
 	std::cout << "finished setting up" << std::endl;
@@ -262,16 +275,12 @@ void setup_tissue( void )
 
 std::vector<std::string> my_coloring_function( Cell* pCell )
 {
-	// start with flow cytometry coloring 
-	std::cout << "start coloring" << std::endl;
-
+	// start with flow cytometry coloring
 	std::vector<std::string> output = false_cell_coloring_cytometry(pCell); 
 
 	long index = pCell->custom_data.find_variable_index("color");
 	output[0] = pCell->custom_data.variables[index].units;
 	output[2] = pCell->custom_data.variables[index].units;
-
-	std::cout << "finished coloring" << std::endl;
 	
 	return output; 
 }
